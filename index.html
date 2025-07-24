@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your $500 Bonus - Claim Now!</title>
+    <title>Your Bonus Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,78 +12,44 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        .bonus-title {
-            color: #FF5722;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .fire-emoji {
-            font-size: 40px;
         }
         .register-btn {
             display: block;
-            background: linear-gradient(to right, #FF416C, #FF4B2B);
+            background-color: #FF6B00;
             color: white;
             text-align: center;
-            padding: 18px;
-            margin: 25px 0;
+            padding: 15px;
+            margin: 20px 0;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            font-size: 20px;
-            box-shadow: 0 4px 8px rgba(255,75,43,0.3);
         }
         .register-btn:hover {
-            background: linear-gradient(to right, #FF4B2B, #FF416C);
-        }
-        .benefits {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .checkmark {
-            color: #4CAF50;
-            font-weight: bold;
-            margin-right: 10px;
+            background-color: #E05D00;
         }
         .form-group {
             margin-bottom: 15px;
         }
         input[type="text"], input[type="email"] {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             margin-top: 5px;
             box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
         }
         button {
-            background: linear-gradient(to right, #4CAF50, #2E8B57);
+            background-color: #4CAF50;
             color: white;
-            padding: 16px 20px;
+            padding: 12px 20px;
             border: none;
             cursor: pointer;
             width: 100%;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 10px;
+            font-size: 16px;
         }
         button:hover {
-            background: linear-gradient(to right, #2E8B57, #4CAF50);
+            background-color: #45a049;
+        }
+        .hidden-field {
+            display: none;
         }
         .divider {
             text-align: center;
@@ -103,36 +69,19 @@
         .divider span {
             background: white;
             padding: 0 15px;
-            color: #777;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-        .note {
-            font-size: 14px;
-            color: #666;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="bonus-title">Your $500 Bonus <span class="fire-emoji">🔥</span></div>
-        <div style="font-size: 20px; font-weight: bold; margin-bottom: 15px;">Sign Up Now & Get all for FREE</div>
-    </div>
-
-    <div class="benefits">
-        <div class="benefit-item"><span class="checkmark">✔</span> 100 Proven Subject Lines – Boost open rates instantly</div>
-        <div class="benefit-item"><span class="checkmark">✔</span> 50,000 REAL Visitors – No bots, just targeted traffic</div>
-        <div class="benefit-item"><span class="checkmark">✔</span> FREE Bitcoins!</div>
-    </div>
-
-    <a href="https://www.myleadgensecret.com/sizzle/?rid=28382&src=bunuspage" class="register-btn">
-        CLAIM YOUR $500 BONUS NOW
-    </a>
-
-    <div class="divider"><span>Already registered?</span></div>
+    <h1>Bonus Page</h1>
     
-    <p style="text-align: center; font-weight: bold;">Complete the form below to receive your special bonus:</p>
+    <a href="https://www.myleadgensecret.com/sizzle/?rid=28382&src=mylead200625" class="register-btn">
+        Register to MyLeadGenSecret to Get Your Bonuses
+    </a>
+    
+    <div class="divider"><span>THEN</span></div>
+    
+    <p>Complete the form below to receive your special bonus:</p>
     
     <form id="bonusForm" method="post" action="https://www.sendsteed.com/subscribe/">
         <div class="form-group">
@@ -160,15 +109,13 @@
         <input type="hidden" name="redirect" value="">
         <input type="hidden" name="source" value="NewMembermylead">
         
-        <button type="submit">GET MY BONUS</button>
+        <button type="submit">Claim Your Bonus Now</button>
     </form>
     
-    <div class="note">
-        <p>Please verify your email address to be redirected to your bonus.</p>
-    </div>
+    <p><small>Please verify your email address to be redirected to your bonus.</small></p>
     
-    <div id="confirmationMessage" style="display: none; margin-top: 20px; padding: 20px; background-color: #f8f9fa; border-left: 4px solid #4CAF50; border-radius: 4px;">
-        <p style="font-weight: bold; color: #4CAF50;">Success! You'll get your bonus within 30 minutes!</p>
+    <div id="confirmationMessage" style="display: none; margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #4CAF50;">
+        <p>You'll get your bonus within 30 minutes!</p>
     </div>
 
     <script>
@@ -177,9 +124,6 @@
             
             // Show confirmation message
             document.getElementById('confirmationMessage').style.display = 'block';
-            
-            // Scroll to confirmation message
-            document.getElementById('confirmationMessage').scrollIntoView({ behavior: 'smooth' });
             
             // Submit form data to original action
             this.submit();
@@ -194,6 +138,7 @@
             };
             
             console.log("Data to be sent to email:", data);
+            // In real implementation, use AJAX to send to server-side script
         });
     </script>
 </body>
