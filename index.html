@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bonus Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hidden-field {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bonus Page</h1>
+    
+    <p>Complete the form below to claim your special bonus!</p>
+    
+    <form id="bonusForm" method="post" action="https://www.sendsteed.com/subscribe/">
+        <div class="form-group">
+            <label>New Member:</label>
+            <input type="text" value="Yes" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="username">MyLeadGenSecret Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="n108567" required placeholder="Enter your full name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="e108567" required placeholder="your@email.com">
+        </div>
+        
+        <input type="hidden" name="lllid" value="108567">
+        <input type="hidden" name="lluid" value="sandyarta">
+        <input type="hidden" name="redirect" value="">
+        <input type="hidden" name="source" value="NewMembermylead">
+        
+        <button type="submit">Claim Your Bonus Now</button>
+    </form>
+    
+    <p><small>Please verify your email address to be redirected to your bonus.</small></p>
+    
+    <div id="confirmationMessage" style="display: none; margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #4CAF50;">
+        <p>You'll get your bonus within 30 minutes!</p>
+    </div>
+
+    <script>
+        document.getElementById('bonusForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block';
+            
+            // Submit form data to original action
+            this.submit();
+            
+            // Send data to your email (this would need server-side implementation)
+            // For demonstration only - this won't actually work without server-side code
+            const formData = new FormData(this);
+            const data = {
+                subject: "new member mylead",
+                username: formData.get('username'),
+                name: formData.get('n108567'),
+                email: formData.get('e108567')
+            };
+            
+            console.log("Data to be sent to email:", data);
+            // In a real implementation, you would use AJAX to send this to a server-side script
+            // that would then email it to morabersl@gmail.com
+        });
+    </script>
+</body>
+</html>
