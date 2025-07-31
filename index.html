@@ -1,7 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Time $1 Offers - Get Started Today!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #ff6b00;
+            text-align: center;
+        }
+        .offer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .offer-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff6b00;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .offer-button:hover {
+            background-color: #ff8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .offer-button:nth-child(2n) {
+            background-color: #00a8ff;
+        }
+        .offer-button:nth-child(2n):hover {
+            background-color: #0095e0;
+        }
+        .offer-button:nth-child(3n) {
+            background-color: #9c27b0;
+        }
+        .offer-button:nth-child(3n):hover {
+            background-color: #7b1fa2;
+        }
+        .email-form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        .email-form h2 {
+            color: #ff6b00;
+            margin-top: 0;
+        }
+        .email-form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .email-form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .email-form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Limited Time $1 Trial Offers!</h1>
+    <p>Don't miss these incredible opportunities to boost your online business for just $1! Click any offer below to get started:</p>
+    
+    <div class="offer-container">
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/q2fwk9/0/', 'Affiliate Hero')">Affiliate Hero $1 Trial</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/rg7003k/0/', '$1 Profit Vault')">$1 Profit Vault</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/lkgpt05/0/', 'Traffic Blaster')">Traffic Blaster $1 Trial</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/lkgpt05/0/', 'Viral List Starter')">$1 Viral List Starter</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/hlhc18v/0/', 'Passive Income')">Passive Income Revolution</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/jnljpm9/0/', 'List Builder')">$1 Instant List Builder</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/tpzp58r/0/', 'Traffic Leads')">Instant Traffic & Leads $1</button>
+        <button class="offer-button" onclick="trackAndRedirect('https://warriorplus.com/o2/a/z510l9v/0/', 'SKWEEZY')">SKWEEZY $1 Special</button>
+    </div>
+    
+    <div class="email-form">
+        <h2>Get More Amazing Offers!</h2>
+        <p>Subscribe to get updates on the best money-making opportunities:</p>
+        <form method="post" action="https://www.sendsteed.com/subscribe/">
+            <input name="n112051" required type="text" placeholder="Your Name">
+            <input name="e112051" required type="text" placeholder="your@email.com">
+            <input type="hidden" name="lllid" value="112051">
+            <input type="hidden" name="lluid" value="sandyarta">
+            <input type="hidden" name="redirect" value="">
+            <input type="hidden" name="source" id="traffic-source" value="">
+            <button type="submit">Subscribe for Updates</button>
+        </form>
+    </div>
+    
+    <p class="disclaimer">* All offers are $1 trial offers. Please review the terms and conditions on each offer page. This is not a guarantee of income.</p>
+    
+    <script>
+        // Function to track traffic source and redirect
+        function trackAndRedirect(url, sourceName) {
+            // Set the traffic source in the form
+            document.getElementById('traffic-source').value = sourceName;
+            
+            // Store in localStorage for future form submissions
+            localStorage.setItem('lastTrafficSource', sourceName);
+            
+            // Open the offer in new window
+            window.open(url, '_blank');
+        }
+        
+        // On page load, check for URL parameters that might indicate source
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sourceParam = urlParams.get('source');
+            
+            if (sourceParam) {
+                document.getElementById('traffic-source').value = sourceParam;
+                localStorage.setItem('lastTrafficSource', sourceParam);
+            } else if (localStorage.getItem('lastTrafficSource')) {
+                document.getElementById('traffic-source').value = localStorage.getItem('lastTrafficSource');
+            }
+        };
+    </script>
+</body>
+</html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">       
     <title>🔥 EXCLUSIVE $1 DEALS - Claim Yours Now!</title>
     <style>
